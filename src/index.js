@@ -1,9 +1,3 @@
-function component() {
-	const element = document.createElement('div');
+import { render } from './header';
 
-	// Using my function
-	element.innerHTML = 'Works';
-	return element;
-}
-
-document.body.appendChild(component());
+render();

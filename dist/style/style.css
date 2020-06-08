@@ -52,6 +52,11 @@ nav > .button:hover {
 	color: #FFF;
 }
 
+.menuImage {
+	max-width: 100%;
+	height: auto;
+}
+
 #menudiv > .list {
 	margin-bottom: 30px;
 	list-style: none;

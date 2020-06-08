@@ -1,5 +1,9 @@
-const getBody = () => {
-	return document.body;
-}
+const Body = (() => {
+	const getBody = () => {
+		return document.body;
+	}
 
-export { getBody };
+	return { getBody };
+})();
+
+export { Body };

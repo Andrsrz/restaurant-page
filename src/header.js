@@ -1,4 +1,4 @@
-import { getBody } from './domBody.js';
+import { Body } from './domBody.js';
 
 const Header = (() => {
 	const render = () => {
@@ -19,7 +19,7 @@ const Header = (() => {
 			navbarDOM.appendChild(buttonsDOM[i]);
 		}
 		headerDOM.appendChild(navbarDOM);
-		getBody().appendChild(headerDOM);
+		Body.getBody().appendChild(headerDOM);
 	}
 
 	return { render };

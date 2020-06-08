@@ -13,6 +13,7 @@ const Contact = (() => {
 		let nameLabel = document.createElement("label");
 		name.type = "text";
 		name.id = "name";
+		name.required = true;
 		nameLabel.for = "name";
 		nameLabel.innerHTML = "Name";
 		nameLabel.style.textAlign = "left";
@@ -21,6 +22,7 @@ const Contact = (() => {
 		let numberLabel = document.createElement("label");
 		number.type = "number";
 		number.id = "number";
+		number.required = true;
 		numberLabel.for = "number";
 		numberLabel.innerHTML = "Whatsapp number";
 		numberLabel.style.textAlign = "left";
@@ -28,6 +30,8 @@ const Contact = (() => {
 		let message = document.createElement("textarea");
 		let messageLabel = document.createElement("label");
 		message.id = "message";
+		message.rows = 10;
+		message.required = true;
 		messageLabel.for = "message";
 		messageLabel.innerHTML = "What do you want to say to us?";
 		messageLabel.style.textAlign = "left";

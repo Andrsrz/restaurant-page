@@ -17,9 +17,12 @@ const Menu = (() => {
 		for(let i = TEXTS.length; i > 0; i--){
 			let listItem = document.createElement("li");
 			listItem.className = "listItem";
-			let food = TEXTS[getRandom(i)];
-			let price = getRandom(MAX_PRICE);
-			listItem.innerHTML = food + " $" + price;
+			let food = document.createElement("h4");
+			food.innerHTML = TEXTS[getRandom(i)];
+			let price = document.createElement("h4");
+			price.innerHTML = "$ " + getRandom(MAX_PRICE) + ".00";
+			listItem.appendChild(food);
+			listItem.appendChild(price);
 			randomList.appendChild(listItem);
 		}
 		return randomList;

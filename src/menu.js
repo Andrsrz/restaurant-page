@@ -1,13 +1,42 @@
 const Menu = (() => {
-	const TEXT = "Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum. Cras adipiscing enim eu turpis egestas pretium aenean pharetra, magna!";
+	const TEXT = "Aenean dictum sapien et diam.";
+	const TEXT_2 = "Nunc interdum felis eu urna.";
+	const TEXT_3 = "Sed pulvinar enim vitae neque.";
+	const TEXT_4 = "Duis convallis, libero at feugiat.";
+	const TEXTS = [TEXT, TEXT_2, TEXT_3, TEXT_4];
+	const MAX_PRICE = 100;
 	var menuDivDOM;
+
+	const getRandom = (max) => {
+		return Math.floor(Math.random() * Math.floor(max));
+	}
+
+	const createRandomList = () => {
+		let randomList = document.createElement("ul");
+		randomList.className = "list"
+		for(let i = TEXTS.length; i > 0; i--){
+			let listItem = document.createElement("li");
+			listItem.className = "listItem";
+			let food = TEXTS[getRandom(i)];
+			let price = getRandom(MAX_PRICE);
+			listItem.innerHTML = food + " $" + price;
+			randomList.appendChild(listItem);
+		}
+		return randomList;
+	}
 
 	const render = (body) => {
 		body.clearMain();
 		menuDivDOM = document.createElement("div");
-		let h3 = document.createElement("h3");
-		h3.innerHTML = TEXT;
-		menuDivDOM.appendChild(h3);
+		menuDivDOM.id = "menudiv";
+		menuDivDOM.className = "contentdiv";
+		for(let i = 0; i < TEXTS.length; i++){
+			let title = document.createElement("h3");
+			title.className = "listTitle";
+			title.innerHTML = TEXTS[i];
+			menuDivDOM.appendChild(title);
+			menuDivDOM.appendChild(createRandomList());
+		}
 		body.getMain().appendChild(menuDivDOM);
 	}
 

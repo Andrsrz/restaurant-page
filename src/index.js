@@ -16,6 +16,7 @@ const Index = (() => {
 				moveToTab(i);
 			});
 		}
+		document.getElementById("aboutus").click();
 	}
 
 	const moveToTab = (index) => {

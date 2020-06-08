@@ -39,12 +39,17 @@ nav > .button:hover {
 	flex-flow: column nowrap;
 	justify-content: center;
 	align-content: center;
-	width: 75%;
+	width: 50%;
 }
 
 #aboutdiv > * {
 	margin: 15px 0 15px 0;
 	text-align: left;
+}
+
+.cover {
+	max-width: 100%;
+	height: auto;
 }
 
 #menudiv > .listTitle {
@@ -54,7 +59,7 @@ nav > .button:hover {
 
 .menuImage {
 	max-width: 100%;
-	height: auto;
+	max-height: 100%;
 }
 
 #menudiv > .list {
@@ -92,6 +97,12 @@ nav > .button:hover {
 	margin: auto;
 	text-align: center;
 	width: 100px;
+}
+
+@media all and (max-width: 1200px) {
+	.contentdiv {
+		width: 75%;
+	}
 }
 
 @media all and (max-width: 1000px) {

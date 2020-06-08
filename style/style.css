@@ -31,3 +31,32 @@ nav > .button {
 nav > .button:hover {
 	background-color: #D1D1D1;
 }
+
+.contentdiv {
+	margin: auto;
+	text-align: center;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-content: center;
+	width: 75%;
+}
+
+#aboutdiv > * {
+	margin: 15px 0 15px 0;
+	text-align: left;
+}
+
+#menudiv > .listTitle {
+	background-color: #000;
+	color: #FFF;
+}
+
+#menudiv > .list {
+	margin-bottom: 30px;
+	list-style: none;
+}
+
+#menudiv > .list > .listItem {
+	margin: 8px 0 8px 0;
+}

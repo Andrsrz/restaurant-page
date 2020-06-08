@@ -63,3 +63,28 @@ nav > .button:hover {
 	flex-flow: row nowrap;
 	justify-content: space-between;
 }
+
+#contactForm {
+	margin: auto;
+	text-align: center;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-content: center;
+	width: 50%;
+}
+
+#contactForm > input {
+	margin-bottom: 15px;
+}
+
+#contactForm > textarea {
+	resize: vertical;
+	margin-bottom: 20px;
+}
+
+#contactForm > #submit {
+	margin: auto;
+	text-align: center;
+	width: 100px;
+}

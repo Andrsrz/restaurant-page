@@ -3,6 +3,7 @@ import { Header } from './header.js';
 import { About } from './about.js';
 import { Menu } from './menu.js';
 import { Contact } from './contact.js';
+import './style.css';
 
 Header.render(Body.getBody());
 Body.renderMain();

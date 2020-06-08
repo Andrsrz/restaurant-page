@@ -1,4 +1,5 @@
 import cover from './tacoscover.jpg';
+import './style.css';
 
 const About = (() => {
 	const TEXT = "Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum. Cras adipiscing enim eu turpis egestas pretium aenean pharetra, magna!";
@@ -9,10 +10,10 @@ const About = (() => {
 		body.clearMain();
 		aboutDivDOM = document.createElement("div");
 		aboutDivDOM.id = "aboutdiv";
-		aboutDivDOM.className = "contentdiv";
+		aboutDivDOM.classList.add("contentdiv");
 		let image = new Image();
 		image.src = cover;
-		image.className = "cover";
+		image.classList.add("cover");
 		let h2 = document.createElement("h2");
 		h2.innerHTML = TEXT;
 		let h3 = document.createElement("h3");

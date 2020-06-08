@@ -1,3 +1,5 @@
+import './style.css';
+
 const Header = (() => {
 	var headerDOM;
 	var navbarDOM;

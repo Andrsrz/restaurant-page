@@ -88,3 +88,15 @@ nav > .button:hover {
 	text-align: center;
 	width: 100px;
 }
+
+@media all and (max-width: 1000px) {
+	#contactForm {
+		width: 75%;
+	}
+}
+
+@media all and (max-width: 800px) {
+	#contactForm {
+		width: 100%;
+	}
+}

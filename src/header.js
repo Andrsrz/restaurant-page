@@ -1,16 +1,20 @@
-import { Body } from './domBody.js';
-
 const Header = (() => {
-	const render = () => {
-		let headerDOM = document.createElement("header");
-		let navbarDOM = document.createElement("nav");
+	var headerDOM;
+	var navbarDOM;
+	var buttonsDOM = [];
+
+	const getButtons = () => buttonsDOM;
+
+	const render = (body) => {
+		headerDOM = document.createElement("header");
+		navbarDOM = document.createElement("nav");
 		let buttonAboutUs = document.createElement("button");
+		buttonAboutUs.id = "aboutus";
 		buttonAboutUs.innerHTML = "About Us";
 		let buttonMenu = document.createElement("button");
 		buttonMenu.innerHTML = "Menu";
 		let buttonContact = document.createElement("button");
 		buttonContact.innerHTML = "Contact";
-		let buttonsDOM = [];
 		buttonsDOM.push(buttonAboutUs);
 		buttonsDOM.push(buttonMenu);
 		buttonsDOM.push(buttonContact);
@@ -19,10 +23,10 @@ const Header = (() => {
 			navbarDOM.appendChild(buttonsDOM[i]);
 		}
 		headerDOM.appendChild(navbarDOM);
-		Body.getBody().appendChild(headerDOM);
+		body.appendChild(headerDOM);
 	}
 
-	return { render };
+	return { render, getButtons };
 })();
 
 export { Header };

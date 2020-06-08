@@ -1,9 +1,22 @@
 const Body = (() => {
-	const getBody = () => {
-		return document.body;
+	var main;
+
+	const getBody = () => document.body;
+	const getMain = () => main;
+
+	const renderMain = () => {
+		main = document.createElement("main");
+		main.id = "main";
+		getBody().appendChild(main);
 	}
 
-	return { getBody };
+	const clearMain = () => {
+		while(main.firstChild){
+			main.removeChild(main.firstChild);
+		}
+	}
+
+	return { getBody, getMain, clearMain, renderMain };
 })();
 
 export { Body };

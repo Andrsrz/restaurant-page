@@ -1,17 +1,17 @@
-const About = (() => {
+const Menu = (() => {
 	const TEXT = "Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum. Cras adipiscing enim eu turpis egestas pretium aenean pharetra, magna!";
-	var aboutDivDOM;
+	var menuDivDOM;
 
 	const render = (body) => {
 		body.clearMain();
-		aboutDivDOM = document.createElement("div");
+		menuDivDOM = document.createElement("div");
 		let h3 = document.createElement("h3");
 		h3.innerHTML = TEXT;
-		aboutDivDOM.appendChild(h3);
-		body.getMain().appendChild(aboutDivDOM);
+		menuDivDOM.appendChild(h3);
+		body.getMain().appendChild(menuDivDOM);
 	}
 
 	return { render };
 })();
 
-export { About };
+export { Menu };

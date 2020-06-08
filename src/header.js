@@ -4,8 +4,11 @@ const render = () => {
 	let headerDOM = document.createElement("header");
 	let navbarDOM = document.createElement("nav");
 	let buttonAboutUs = document.createElement("button");
+	buttonAboutUs.innerHTML = "About Us";
 	let buttonMenu = document.createElement("button");
+	buttonMenu.innerHTML = "Menu";
 	let buttonContact = document.createElement("button");
+	buttonContact.innerHTML = "Contact";
 	let buttonsDOM = [];
 	buttonsDOM.push(buttonAboutUs);
 	buttonsDOM.push(buttonMenu);
